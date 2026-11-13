@@ -1,5 +1,16 @@
-quazi-selfhost-structure/
-├── core/
+quazi-selfhost-example-structure-main/
+├── src/
+│   ├── backend/
+│   │   ├── src/
+│   │   │   ├── backend.qz
+│   │   │   ├── codegen.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── linking.qz
+│   │   │   ├── objects.qz
+│   │   │   ├── registers.qz
+│   │   │   ├── relocations.qz
+│   │   │   └── target.qz
+│   │   └── quazi.toml
 │   ├── build/
 │   │   ├── src/
 │   │   │   ├── artifacts.qz
@@ -9,6 +20,28 @@ quazi-selfhost-structure/
 │   │   │   ├── graph.qz
 │   │   │   ├── lib.qz
 │   │   │   └── manifest.qz
+│   │   └── quazi.toml
+│   ├── chunks/
+│   │   ├── src/
+│   │   │   ├── control/
+│   │   │   │   ├── branches.qz
+│   │   │   │   ├── loops.qz
+│   │   │   │   └── match.qz
+│   │   │   ├── expression/
+│   │   │   │   ├── aggregates.qz
+│   │   │   │   ├── calls.qz
+│   │   │   │   ├── operators.qz
+│   │   │   │   └── places.qz
+│   │   │   ├── ownership/
+│   │   │   │   ├── cleanup.qz
+│   │   │   │   └── drop_glue.qz
+│   │   │   ├── builder.qz
+│   │   │   ├── control_flow.qz
+│   │   │   ├── expressions.qz
+│   │   │   ├── functions.qz
+│   │   │   ├── generics.qz
+│   │   │   ├── lib.qz
+│   │   │   └── ownership.qz
 │   │   └── quazi.toml
 │   ├── compiler/
 │   │   ├── src/
@@ -27,6 +60,23 @@ quazi-selfhost-structure/
 │   │   │   ├── reporter.qz
 │   │   │   └── suggestions.qz
 │   │   └── quazi.toml
+│   ├── frontend/
+│   │   ├── src/
+│   │   │   ├── expression/
+│   │   │   │   ├── patterns.qz
+│   │   │   │   ├── postfix.qz
+│   │   │   │   ├── precedence.qz
+│   │   │   │   └── primary.qz
+│   │   │   ├── ast.qz
+│   │   │   ├── attributes.qz
+│   │   │   ├── declarations.qz
+│   │   │   ├── expressions.qz
+│   │   │   ├── lexer.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── parser.qz
+│   │   │   ├── statements.qz
+│   │   │   └── tokens.qz
+│   │   └── quazi.toml
 │   ├── jit/
 │   │   ├── src/
 │   │   │   ├── execution.qz
@@ -36,16 +86,6 @@ quazi-selfhost-structure/
 │   │   │   ├── memory.qz
 │   │   │   └── symbols.qz
 │   │   └── quazi.toml
-│   ├── lowering/
-│   │   ├── src/
-│   │   │   ├── control_flow.qz
-│   │   │   ├── expressions.qz
-│   │   │   ├── functions.qz
-│   │   │   ├── generics.qz
-│   │   │   ├── lib.qz
-│   │   │   ├── lowering.qz
-│   │   │   └── ownership.qz
-│   │   └── quazi.toml
 │   ├── modules/
 │   │   ├── src/
 │   │   │   ├── graph.qz
@@ -53,17 +93,6 @@ quazi-selfhost-structure/
 │   │   │   ├── lib.qz
 │   │   │   ├── packages.qz
 │   │   │   └── resolver.qz
-│   │   └── quazi.toml
-│   ├── native/
-│   │   ├── src/
-│   │   │   ├── backend.qz
-│   │   │   ├── codegen.qz
-│   │   │   ├── lib.qz
-│   │   │   ├── linking.qz
-│   │   │   ├── objects.qz
-│   │   │   ├── registers.qz
-│   │   │   ├── relocations.qz
-│   │   │   └── target.qz
 │   │   └── quazi.toml
 │   ├── optimizer/
 │   │   ├── src/
@@ -111,6 +140,11 @@ quazi-selfhost-structure/
 │   ├── semantic/
 │   │   ├── src/
 │   │   │   ├── ownership/
+│   │   │   │   ├── ownership/
+│   │   │   │   │   └── borrow/
+│   │   │   │   │       ├── conflicts.qz
+│   │   │   │   │       ├── loans.qz
+│   │   │   │   │       └── provenance.qz
 │   │   │   │   ├── borrowing.qz
 │   │   │   │   ├── cleanup.qz
 │   │   │   │   ├── lifetimes.qz
@@ -118,6 +152,13 @@ quazi-selfhost-structure/
 │   │   │   │   ├── ownership.qz
 │   │   │   │   └── retention.qz
 │   │   │   ├── types/
+│   │   │   │   ├── types/
+│   │   │   │   │   └── check/
+│   │   │   │   │       ├── calls.qz
+│   │   │   │   │       ├── compatibility.qz
+│   │   │   │   │       ├── expressions.qz
+│   │   │   │   │       ├── items.qz
+│   │   │   │   │       └── operators.qz
 │   │   │   │   ├── checking.qz
 │   │   │   │   ├── constraints.qz
 │   │   │   │   ├── generics.qz
@@ -141,18 +182,6 @@ quazi-selfhost-structure/
 │   │   │   ├── source.qz
 │   │   │   └── spans.qz
 │   │   └── quazi.toml
-│   ├── syntax/
-│   │   ├── src/
-│   │   │   ├── ast.qz
-│   │   │   ├── attributes.qz
-│   │   │   ├── declarations.qz
-│   │   │   ├── expressions.qz
-│   │   │   ├── lexer.qz
-│   │   │   ├── lib.qz
-│   │   │   ├── parser.qz
-│   │   │   ├── statements.qz
-│   │   │   └── tokens.qz
-│   │   └── quazi.toml
 │   └── target/
 │       ├── src/
 │       │   ├── compatibility.qz
@@ -163,108 +192,7 @@ quazi-selfhost-structure/
 │       │   ├── registry.qz
 │       │   └── resolver.qz
 │       └── quazi.toml
-├── examples/
-│   ├── architecture.txt
-│   ├── cli-usage.sh
-│   ├── installed-toolchain-layout.txt
-│   ├── other-repositories.txt
-│   ├── quazifetch.quazi.toml
-│   └── target.toml
-├── specs/
-│   ├── language.md
-│   ├── ownership.md
-│   ├── qzi.md
-│   ├── target-api.md
-│   └── toolchain.md
-├── targets/
-│   ├── abi/
-│   │   ├── sysv_amd64/
-│   │   │   ├── src/
-│   │   │   │   ├── calling.qz
-│   │   │   │   ├── lib.qz
-│   │   │   │   └── stack.qz
-│   │   │   └── quazi.toml
-│   │   └── win64/
-│   │       ├── src/
-│   │       │   ├── calling.qz
-│   │       │   ├── lib.qz
-│   │       │   └── stack.qz
-│   │       └── quazi.toml
-│   ├── arch/
-│   │   └── x86_64/
-│   │       ├── src/
-│   │       │   ├── encoder.qz
-│   │       │   ├── instructions.qz
-│   │       │   ├── lib.qz
-│   │       │   ├── lowering.qz
-│   │       │   ├── regalloc.qz
-│   │       │   ├── registers.qz
-│   │       │   ├── relocations.qz
-│   │       │   └── selection.qz
-│   │       └── quazi.toml
-│   ├── linker/
-│   │   ├── elf_netbsd/
-│   │   │   ├── src/
-│   │   │   │   ├── dynamic.qz
-│   │   │   │   ├── lib.qz
-│   │   │   │   ├── linker.qz
-│   │   │   │   └── relocations.qz
-│   │   │   └── quazi.toml
-│   │   ├── elf_static/
-│   │   │   ├── src/
-│   │   │   │   ├── layout.qz
-│   │   │   │   ├── lib.qz
-│   │   │   │   ├── linker.qz
-│   │   │   │   └── relocations.qz
-│   │   │   └── quazi.toml
-│   │   └── pe64/
-│   │       ├── src/
-│   │       │   ├── imports.qz
-│   │       │   ├── lib.qz
-│   │       │   ├── linker.qz
-│   │       │   └── relocations.qz
-│   │       └── quazi.toml
-│   ├── object/
-│   │   ├── elf64/
-│   │   │   ├── src/
-│   │   │   │   ├── lib.qz
-│   │   │   │   ├── relocations.qz
-│   │   │   │   ├── sections.qz
-│   │   │   │   ├── symbols.qz
-│   │   │   │   └── writer.qz
-│   │   │   └── quazi.toml
-│   │   └── pe64/
-│   │       ├── src/
-│   │       │   ├── imports.qz
-│   │       │   ├── lib.qz
-│   │       │   ├── sections.qz
-│   │       │   └── writer.qz
-│   │       └── quazi.toml
-│   ├── os/
-│   │   ├── linux/
-│   │   │   ├── src/
-│   │   │   │   ├── lib.qz
-│   │   │   │   └── platform.qz
-│   │   │   └── quazi.toml
-│   │   ├── netbsd/
-│   │   │   ├── src/
-│   │   │   │   ├── lib.qz
-│   │   │   │   └── platform.qz
-│   │   │   └── quazi.toml
-│   │   └── windows/
-│   │       ├── src/
-│   │       │   ├── lib.qz
-│   │       │   └── platform.qz
-│   │       └── quazi.toml
-│   └── profiles/
-│       ├── x86_64-linux-musl/
-│       │   └── target.toml
-│       ├── x86_64-linux-static/
-│       │   └── target.toml
-│       ├── x86_64-netbsd/
-│       │   └── target.toml
-│       └── x86_64-windows/
-│           └── target.toml
 ├── .gitignore
+├── LICENSE
 ├── quazi.toml
 └── README.md

@@ -6,9 +6,11 @@ and component contracts are illustrative until the self-host design is finalized
 
 ## Rules
 
-- `core/`, not `packages/`, contains separately reusable compiler libraries.
+- `src/` contains separately reusable compiler libraries (no `packages/` directory).
 - `qz` is a thin CLI facade. The actual compiler is composed from libraries.
 - **QZI is the primary output of `qz build`**, not a disposable intermediate form.
+- `src/chunks/` builds in-memory chunks from checked semantics. `src/qzi/` serializes/reads them;
+  the native backend can consume chunks without first writing a `.qzi` file.
 - A single optimized compilation mode. No O0/O1/O2/O3 profiles.
 - Downloadable targets are **declarative compositions** of QZI components for
   architecture, OS, ABI, object format and linker. Component source lives in `targets/`.
@@ -23,8 +25,8 @@ and component contracts are illustrative until the self-host design is finalized
 
 ## Quick tour
 
-- `core/`: CLI, frontend, semantics, QZI, lowering, optimizer, native API,
-  JIT, target loading, build and diagnostics.
+- `src/`: CLI, frontend, semantics, `chunks/`, QZI codec, optimizer,
+  native backend API, JIT, target loading, build and diagnostics.
 - `targets/`: implementations and downloadable target profiles.
 - `specs/`: internal format and interface contracts.
 - `examples/`: sample target manifest, CLI and installed toolchain layouts.

@@ -1,6 +1,6 @@
 // Quazi self-host design scaffold — NOT an implementation.
-// File: ownership/cleanup.qz
-// Responsibility: Emit scope-exit, early-return and temporary cleanup from the semantic cleanup plan.
-// Parent: quazi/src/lowering/src/ownership.qz
+// File: control/match.qz
+// Responsibility: Lower pattern-match dispatch, guarded arms and branch result merges into chunks.
+// Parent: src/chunks/src/control_flow.qz
 // Implement only existing bootstrap functionality during P0/P1.
 // Keep implementation within this responsibility; do not create unused abstractions.

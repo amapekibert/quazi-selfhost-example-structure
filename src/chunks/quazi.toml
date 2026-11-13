@@ -1,4 +1,4 @@
 # Proposed package manifest (adapt keys to the actual Quazi manifest schema).
 [package]
-name = "quazi.lowering"
+name = "quazi.chunks"
 version = "0.0.0"

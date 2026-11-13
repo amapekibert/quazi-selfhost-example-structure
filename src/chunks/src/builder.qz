@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: chunks
+// File: builder.qz
+// Responsibility: Coordinate chunk creation from a validated semantic model; no parsing or type checking.
+// Package boundary: Build the in-memory chunk representation from validated semantic structures; no QZI serialization, native encoding or type checking.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

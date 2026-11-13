@@ -1,7 +1,0 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: lowering
-// File: functions.qz
-// Responsibility: Function table and bodies.
-// Package boundary: Lowers validated semantic structures to QZI; preserves semantic correctness.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.

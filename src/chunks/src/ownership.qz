@@ -1,8 +1,8 @@
 // Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: lowering
+// Component: chunks
 // File: ownership.qz
-// Responsibility: Ownership semantics and state.
-// Package boundary: Lowers validated semantic structures to QZI; preserves semantic correctness.
+// Responsibility: Emit moves, drops and cleanup actions from validated semantic ownership plans.
+// Package boundary: Build the in-memory chunk representation from validated semantic structures; no QZI serialization, native encoding or type checking.
 // TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
 // Do not introduce new language features before bootstrap parity.
 // Split boundary: this file remains the coordinator for its responsibility;

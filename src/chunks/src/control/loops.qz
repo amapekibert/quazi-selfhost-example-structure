@@ -1,6 +1,6 @@
 // Quazi self-host design scaffold — NOT an implementation.
 // File: control/loops.qz
-// Responsibility: Lower loops, break, continue, and loop control edges into QZI.
-// Parent: quazi/src/lowering/src/control_flow.qz
+// Responsibility: Lower loops, break, continue, and loop control edges into chunks.
+// Parent: src/chunks/src/control_flow.qz
 // Implement only existing bootstrap functionality during P0/P1.
 // Keep implementation within this responsibility; do not create unused abstractions.

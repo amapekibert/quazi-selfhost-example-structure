@@ -1,6 +1,6 @@
 // Quazi self-host design scaffold — NOT an implementation.
-// File: ownership/drop_glue.qz
-// Responsibility: Emit drop glue for owned values/aggregates in the order established by semantic analysis.
-// Parent: quazi/src/lowering/src/ownership.qz
+// File: control/branches.qz
+// Responsibility: Lower if/else and short-circuit branch edges and join points into chunks.
+// Parent: src/chunks/src/control_flow.qz
 // Implement only existing bootstrap functionality during P0/P1.
 // Keep implementation within this responsibility; do not create unused abstractions.
