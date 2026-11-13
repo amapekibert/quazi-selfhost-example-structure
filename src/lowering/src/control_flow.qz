@@ -1,0 +1,12 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: lowering
+// File: control_flow.qz
+// Responsibility: Control-flow representation and checks.
+// Package boundary: Lowers validated semantic structures to QZI; preserves semantic correctness.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.
+// Split boundary: this file remains the coordinator for its responsibility;
+// implementation details belong to the adjacent modules listed below.
+//   control/branches.qz: Lower if/else and short-circuit branch edges and join points into QZI.
+//   control/loops.qz: Lower loops, break, continue, and loop control edges into QZI.
+//   control/match.qz: Lower pattern-match dispatch, guarded arms and branch result merges into QZI.

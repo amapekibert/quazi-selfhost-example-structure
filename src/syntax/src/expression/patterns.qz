@@ -1,0 +1,6 @@
+// Quazi self-host design scaffold — NOT an implementation.
+// File: expression/patterns.qz
+// Responsibility: Patterns and match-arm grammar used by match expressions; no semantic exhaustiveness checks.
+// Parent: quazi/src/syntax/src/expressions.qz
+// Implement only existing bootstrap functionality during P0/P1.
+// Keep implementation within this responsibility; do not create unused abstractions.

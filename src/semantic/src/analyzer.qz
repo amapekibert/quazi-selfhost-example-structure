@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: semantic
+// File: analyzer.qz
+// Responsibility: Top-level semantic phase coordination.
+// Package boundary: Resolution, types, ownership and validation of Quazi semantics.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

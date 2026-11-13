@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: semantic.ownership
+// File: ownership.qz
+// Responsibility: Ownership semantics and state.
+// Package boundary: Resolution, types, ownership and validation of Quazi semantics.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

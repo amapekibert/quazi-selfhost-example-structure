@@ -1,0 +1,4 @@
+# Proposed package manifest (adapt keys to the actual Quazi manifest schema).
+[package]
+name = "quazi.native"
+version = "0.0.0"

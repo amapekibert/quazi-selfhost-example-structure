@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: jit
+// File: execution.qz
+// Responsibility: In-memory invocation.
+// Package boundary: JIT execution of QZI using selected host-compatible backend components.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

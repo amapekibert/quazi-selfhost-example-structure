@@ -1,0 +1,6 @@
+// Quazi self-host design scaffold — NOT an implementation.
+// File: expression/aggregates.qz
+// Responsibility: Lower struct/enum/array construction and aggregate field access into QZI.
+// Parent: quazi/src/lowering/src/expressions.qz
+// Implement only existing bootstrap functionality during P0/P1.
+// Keep implementation within this responsibility; do not create unused abstractions.

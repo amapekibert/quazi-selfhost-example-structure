@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: native
+// File: backend.qz
+// Responsibility: Host-side backend API for target implementations.
+// Package boundary: Target-neutral interfaces to native machine-code generation and linking.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

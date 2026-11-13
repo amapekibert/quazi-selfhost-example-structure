@@ -1,0 +1,6 @@
+// Quazi self-host design scaffold — NOT an implementation.
+// File: expression/precedence.qz
+// Responsibility: Expression operator precedence and associativity parsing; binary/range/assignment operator chains.
+// Parent: quazi/src/syntax/src/expressions.qz
+// Implement only existing bootstrap functionality during P0/P1.
+// Keep implementation within this responsibility; do not create unused abstractions.

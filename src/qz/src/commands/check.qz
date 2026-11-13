@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: qz.commands
+// File: check.qz
+// Responsibility: Analyze and validate without native code generation.
+// Package boundary: Thin CLI facade. Delegates to libraries, no type checking or target-specific code here.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

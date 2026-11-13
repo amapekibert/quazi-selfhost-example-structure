@@ -1,0 +1,11 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: lowering
+// File: ownership.qz
+// Responsibility: Ownership semantics and state.
+// Package boundary: Lowers validated semantic structures to QZI; preserves semantic correctness.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.
+// Split boundary: this file remains the coordinator for its responsibility;
+// implementation details belong to the adjacent modules listed below.
+//   ownership/cleanup.qz: Emit scope-exit, early-return and temporary cleanup from the semantic cleanup plan.
+//   ownership/drop_glue.qz: Emit drop glue for owned values/aggregates in the order established by semantic analysis.

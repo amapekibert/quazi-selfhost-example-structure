@@ -1,0 +1,7 @@
+/build/
+/.quazi/
+*.o
+*.obj
+*.exe
+# QZI is source-adjacent build output in this repository, not handwritten.
+*.qzi

@@ -1,0 +1,270 @@
+quazi-selfhost-structure/
+├── core/
+│   ├── build/
+│   │   ├── src/
+│   │   │   ├── artifacts.qz
+│   │   │   ├── cache.qz
+│   │   │   ├── dependencies.qz
+│   │   │   ├── fingerprint.qz
+│   │   │   ├── graph.qz
+│   │   │   ├── lib.qz
+│   │   │   └── manifest.qz
+│   │   └── quazi.toml
+│   ├── compiler/
+│   │   ├── src/
+│   │   │   ├── compiler.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── options.qz
+│   │   │   ├── pipeline.qz
+│   │   │   ├── result.qz
+│   │   │   └── session.qz
+│   │   └── quazi.toml
+│   ├── diagnostics/
+│   │   ├── src/
+│   │   │   ├── diagnostic.qz
+│   │   │   ├── labels.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── reporter.qz
+│   │   │   └── suggestions.qz
+│   │   └── quazi.toml
+│   ├── jit/
+│   │   ├── src/
+│   │   │   ├── execution.qz
+│   │   │   ├── jit.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── loader.qz
+│   │   │   ├── memory.qz
+│   │   │   └── symbols.qz
+│   │   └── quazi.toml
+│   ├── lowering/
+│   │   ├── src/
+│   │   │   ├── control_flow.qz
+│   │   │   ├── expressions.qz
+│   │   │   ├── functions.qz
+│   │   │   ├── generics.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── lowering.qz
+│   │   │   └── ownership.qz
+│   │   └── quazi.toml
+│   ├── modules/
+│   │   ├── src/
+│   │   │   ├── graph.qz
+│   │   │   ├── imports.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── packages.qz
+│   │   │   └── resolver.qz
+│   │   └── quazi.toml
+│   ├── native/
+│   │   ├── src/
+│   │   │   ├── backend.qz
+│   │   │   ├── codegen.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── linking.qz
+│   │   │   ├── objects.qz
+│   │   │   ├── registers.qz
+│   │   │   ├── relocations.qz
+│   │   │   └── target.qz
+│   │   └── quazi.toml
+│   ├── optimizer/
+│   │   ├── src/
+│   │   │   ├── analysis.qz
+│   │   │   ├── constants.qz
+│   │   │   ├── control_flow.qz
+│   │   │   ├── dead_code.qz
+│   │   │   ├── escape.qz
+│   │   │   ├── inlining.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── loops.qz
+│   │   │   ├── pipeline.qz
+│   │   │   └── propagation.qz
+│   │   └── quazi.toml
+│   ├── qz/
+│   │   ├── src/
+│   │   │   ├── commands/
+│   │   │   │   ├── build.qz
+│   │   │   │   ├── check.qz
+│   │   │   │   ├── clean.qz
+│   │   │   │   ├── info.qz
+│   │   │   │   └── run.qz
+│   │   │   ├── cli.qz
+│   │   │   ├── main.qz
+│   │   │   └── output.qz
+│   │   └── quazi.toml
+│   ├── qzi/
+│   │   ├── src/
+│   │   │   ├── builder.qz
+│   │   │   ├── constants.qz
+│   │   │   ├── decoder.qz
+│   │   │   ├── encoder.qz
+│   │   │   ├── exports.qz
+│   │   │   ├── format.qz
+│   │   │   ├── functions.qz
+│   │   │   ├── header.qz
+│   │   │   ├── imports.qz
+│   │   │   ├── instructions.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── metadata.qz
+│   │   │   ├── symbols.qz
+│   │   │   ├── types.qz
+│   │   │   └── verifier.qz
+│   │   └── quazi.toml
+│   ├── semantic/
+│   │   ├── src/
+│   │   │   ├── ownership/
+│   │   │   │   ├── borrowing.qz
+│   │   │   │   ├── cleanup.qz
+│   │   │   │   ├── lifetimes.qz
+│   │   │   │   ├── moves.qz
+│   │   │   │   ├── ownership.qz
+│   │   │   │   └── retention.qz
+│   │   │   ├── types/
+│   │   │   │   ├── checking.qz
+│   │   │   │   ├── constraints.qz
+│   │   │   │   ├── generics.qz
+│   │   │   │   ├── inference.qz
+│   │   │   │   ├── traits.qz
+│   │   │   │   └── types.qz
+│   │   │   ├── analyzer.qz
+│   │   │   ├── constants.qz
+│   │   │   ├── control_flow.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── resolution.qz
+│   │   │   ├── scopes.qz
+│   │   │   ├── symbols.qz
+│   │   │   └── validation.qz
+│   │   └── quazi.toml
+│   ├── source/
+│   │   ├── src/
+│   │   │   ├── files.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── locations.qz
+│   │   │   ├── source.qz
+│   │   │   └── spans.qz
+│   │   └── quazi.toml
+│   ├── syntax/
+│   │   ├── src/
+│   │   │   ├── ast.qz
+│   │   │   ├── attributes.qz
+│   │   │   ├── declarations.qz
+│   │   │   ├── expressions.qz
+│   │   │   ├── lexer.qz
+│   │   │   ├── lib.qz
+│   │   │   ├── parser.qz
+│   │   │   ├── statements.qz
+│   │   │   └── tokens.qz
+│   │   └── quazi.toml
+│   └── target/
+│       ├── src/
+│       │   ├── compatibility.qz
+│       │   ├── components.qz
+│       │   ├── lib.qz
+│       │   ├── loader.qz
+│       │   ├── manifest.qz
+│       │   ├── registry.qz
+│       │   └── resolver.qz
+│       └── quazi.toml
+├── examples/
+│   ├── architecture.txt
+│   ├── cli-usage.sh
+│   ├── installed-toolchain-layout.txt
+│   ├── other-repositories.txt
+│   ├── quazifetch.quazi.toml
+│   └── target.toml
+├── specs/
+│   ├── language.md
+│   ├── ownership.md
+│   ├── qzi.md
+│   ├── target-api.md
+│   └── toolchain.md
+├── targets/
+│   ├── abi/
+│   │   ├── sysv_amd64/
+│   │   │   ├── src/
+│   │   │   │   ├── calling.qz
+│   │   │   │   ├── lib.qz
+│   │   │   │   └── stack.qz
+│   │   │   └── quazi.toml
+│   │   └── win64/
+│   │       ├── src/
+│   │       │   ├── calling.qz
+│   │       │   ├── lib.qz
+│   │       │   └── stack.qz
+│   │       └── quazi.toml
+│   ├── arch/
+│   │   └── x86_64/
+│   │       ├── src/
+│   │       │   ├── encoder.qz
+│   │       │   ├── instructions.qz
+│   │       │   ├── lib.qz
+│   │       │   ├── lowering.qz
+│   │       │   ├── regalloc.qz
+│   │       │   ├── registers.qz
+│   │       │   ├── relocations.qz
+│   │       │   └── selection.qz
+│   │       └── quazi.toml
+│   ├── linker/
+│   │   ├── elf_netbsd/
+│   │   │   ├── src/
+│   │   │   │   ├── dynamic.qz
+│   │   │   │   ├── lib.qz
+│   │   │   │   ├── linker.qz
+│   │   │   │   └── relocations.qz
+│   │   │   └── quazi.toml
+│   │   ├── elf_static/
+│   │   │   ├── src/
+│   │   │   │   ├── layout.qz
+│   │   │   │   ├── lib.qz
+│   │   │   │   ├── linker.qz
+│   │   │   │   └── relocations.qz
+│   │   │   └── quazi.toml
+│   │   └── pe64/
+│   │       ├── src/
+│   │       │   ├── imports.qz
+│   │       │   ├── lib.qz
+│   │       │   ├── linker.qz
+│   │       │   └── relocations.qz
+│   │       └── quazi.toml
+│   ├── object/
+│   │   ├── elf64/
+│   │   │   ├── src/
+│   │   │   │   ├── lib.qz
+│   │   │   │   ├── relocations.qz
+│   │   │   │   ├── sections.qz
+│   │   │   │   ├── symbols.qz
+│   │   │   │   └── writer.qz
+│   │   │   └── quazi.toml
+│   │   └── pe64/
+│   │       ├── src/
+│   │       │   ├── imports.qz
+│   │       │   ├── lib.qz
+│   │       │   ├── sections.qz
+│   │       │   └── writer.qz
+│   │       └── quazi.toml
+│   ├── os/
+│   │   ├── linux/
+│   │   │   ├── src/
+│   │   │   │   ├── lib.qz
+│   │   │   │   └── platform.qz
+│   │   │   └── quazi.toml
+│   │   ├── netbsd/
+│   │   │   ├── src/
+│   │   │   │   ├── lib.qz
+│   │   │   │   └── platform.qz
+│   │   │   └── quazi.toml
+│   │   └── windows/
+│   │       ├── src/
+│   │       │   ├── lib.qz
+│   │       │   └── platform.qz
+│   │       └── quazi.toml
+│   └── profiles/
+│       ├── x86_64-linux-musl/
+│       │   └── target.toml
+│       ├── x86_64-linux-static/
+│       │   └── target.toml
+│       ├── x86_64-netbsd/
+│       │   └── target.toml
+│       └── x86_64-windows/
+│           └── target.toml
+├── .gitignore
+├── quazi.toml
+└── README.md

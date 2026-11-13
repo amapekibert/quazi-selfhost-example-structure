@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: source
+// File: source.qz
+// Responsibility: Source abstraction and IDs.
+// Package boundary: Source buffers, file identifiers, spans and source locations.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

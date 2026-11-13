@@ -1,0 +1,13 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: lowering
+// File: expressions.qz
+// Responsibility: Expression syntax.
+// Package boundary: Lowers validated semantic structures to QZI; preserves semantic correctness.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.
+// Split boundary: this file remains the coordinator for its responsibility;
+// implementation details belong to the adjacent modules listed below.
+//   expression/calls.qz: Lower direct/indirect, method, intrinsic and foreign calls into QZI.
+//   expression/operators.qz: Lower arithmetic, comparison, bitwise, cast and logical operations into QZI.
+//   expression/aggregates.qz: Lower struct/enum/array construction and aggregate field access into QZI.
+//   expression/places.qz: Lower lvalue/place addressing, indexing, loads, stores and assignments into QZI.

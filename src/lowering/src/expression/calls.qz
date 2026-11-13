@@ -1,0 +1,6 @@
+// Quazi self-host design scaffold — NOT an implementation.
+// File: expression/calls.qz
+// Responsibility: Lower direct/indirect, method, intrinsic and foreign calls into QZI.
+// Parent: quazi/src/lowering/src/expressions.qz
+// Implement only existing bootstrap functionality during P0/P1.
+// Keep implementation within this responsibility; do not create unused abstractions.

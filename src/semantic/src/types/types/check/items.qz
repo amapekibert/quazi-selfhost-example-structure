@@ -1,0 +1,6 @@
+// Quazi self-host design scaffold — NOT an implementation.
+// File: types/check/items.qz
+// Responsibility: Type-checking item declarations, function bodies, parameters and declared signatures.
+// Parent: quazi/src/semantic/src/types/checking.qz
+// Implement only existing bootstrap functionality during P0/P1.
+// Keep implementation within this responsibility; do not create unused abstractions.

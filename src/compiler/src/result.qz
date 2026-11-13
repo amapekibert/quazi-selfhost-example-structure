@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: compiler
+// File: result.qz
+// Responsibility: Result and error types for compiler execution.
+// Package boundary: Coordinates compilation phases and preserves deterministic phase boundaries.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.

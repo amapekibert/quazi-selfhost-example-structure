@@ -1,0 +1,6 @@
+// Quazi self-host design scaffold — NOT an implementation.
+// File: ownership/borrow/provenance.qz
+// Responsibility: Track origins of borrowed values and prevent invalid reference escape.
+// Parent: quazi/src/semantic/src/ownership/borrowing.qz
+// Implement only existing bootstrap functionality during P0/P1.
+// Keep implementation within this responsibility; do not create unused abstractions.

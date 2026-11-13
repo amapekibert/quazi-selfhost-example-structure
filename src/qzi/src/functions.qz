@@ -1,0 +1,7 @@
+// Quazi self-host compiler — design scaffold, NOT implementation.
+// Component: qzi
+// File: functions.qz
+// Responsibility: Function table and bodies.
+// Package boundary: The central portable, versioned bytecode/artifact format and its contract.
+// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
+// Do not introduce new language features before bootstrap parity.
