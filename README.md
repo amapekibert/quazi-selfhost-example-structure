@@ -1,35 +1,83 @@
-# Quazi self-host compiler — proposed source layout
+# Quazi
 
-Design scaffold accompanying the agreed architecture. **This is not a working compiler.**
-All `.qz` files contain comments describing their intended responsibilities. Manifests
-and component contracts are illustrative until the self-host design is finalized.
+**The Quazi compiler, written in Quazi.**
 
-## Rules
+Quazilang Selfhost is the next implementation of the Quazi compiler, developed in Quazi itself. The project follows an incremental path: first produce QZI using a Quazi-written compiler, then replace the Rust bootstrap's native backend with a native backend written in Quazi.
 
-- `src/` contains separately reusable compiler libraries (no `packages/` directory).
-- `qz` is a thin CLI facade. The actual compiler is composed from libraries.
-- **QZI is the primary output of `qz build`**, not a disposable intermediate form.
-- `src/chunks/` builds in-memory chunks from checked semantics. `src/qzi/` serializes/reads them;
-  the native backend can consume chunks without first writing a `.qzi` file.
-- A single optimized compilation mode. No O0/O1/O2/O3 profiles.
-- Downloadable targets are **declarative compositions** of QZI components for
-  architecture, OS, ABI, object format and linker. Component source lives in `targets/`.
-- `.qzi` files are generated artifacts: **none are fabricated in this scaffold**.
-- The existing Quazi stdlib/runtime remain external; do not rewrite for its own sake.
-- P0: reproduce **all bootstrap behavior** in clean Quazi code and architecture.
-- P1: independent self-host without the temporary bridge; P2: optimize;
-  P3+: new features and ecosystem extensions.
-- `qzup`, `lsp`, `tests`, `docs` live in separate repositories.
-- No `bootstrap/` directory in the self-host repository.
-- `specs/` holds *internal technical contracts*, not user-facing documentation.
+## Development Status
 
-## Quick tour
+**Plan completion: 0.0%.**  
+**Remaining work: 100.0%.**
 
-- `src/`: CLI, frontend, semantics, `chunks/`, QZI codec, optimizer,
-  native backend API, JIT, target loading, build and diagnostics.
-- `targets/`: implementations and downloadable target profiles.
-- `specs/`: internal format and interface contracts.
-- `examples/`: sample target manifest, CLI and installed toolchain layouts.
-- `SOURCE_TREE.txt`: exhaustive list of the scaffold files.
+**Current phase:** P0 — QZI Compiler Foundation  
+**Implementation status:** Initial source structure; implementation pending.
 
-See `examples/architecture.txt` and `examples/installed-toolchain-layout.txt`.
+| P0 task | Completed | Progress |
+| :--- | ---: | ---: |
+| Workspace, compiler entry point & build workflow | 0/1 | 0.0% |
+| Source handling, lexer, parser & AST | 0/1 | 0.0% |
+| Name resolution, type checking, semantic validation & diagnostics | 0/1 | 0.0% |
+| Lowering & QZI generation | 0/1 | 0.0% |
+| QZI compatibility with the Rust bootstrap | 0/1 | 0.0% |
+| End-to-end compilation & behavior verification | 0/1 | 0.0% |
+| **P0 total** | **0/6** | **0.0%** |
+
+The table tracks the **6 P0 tasks** in [`TODO.md`](TODO.md); the overall plan completion above covers all **24 roadmap tasks** (P0–P3). These percentages describe completion of the *selfhost roadmap*, not the functionality of the Quazi language or the status of the existing Rust bootstrap.
+
+## Compilation Strategy
+
+### P0 — Quazi frontend, Rust backend
+
+```text
+source.qz
+    │
+    ▼
+Quazi Selfhost
+  frontend → semantic analysis → lowering → QZI emission
+    │
+    ▼
+program.qzi
+    │
+    ▼
+Quazistrap (Rust bootstrap)
+  QZI → native code → linking
+    │
+    ▼
+executable
+```
+
+P0 focuses exclusively on producing compatible `.qzi` artifacts. Native code generation and linking remain the responsibility of the existing Rust bootstrap.
+
+### P1 — Independent self-hosting
+
+```text
+source.qz
+    │
+    ▼
+Quazi Selfhost
+  frontend → semantic analysis → lowering → QZI
+    │
+    ▼
+Quazi native backend
+  QZI → native code → linking
+    │
+    ▼
+executable
+```
+
+P1 introduces the native backend in Quazi and establishes a compiler that can rebuild itself without relying on the Rust backend. Full bootstrap feature parity is reserved for P2.
+
+## Roadmap
+
+Development is organized into four priorities:
+
+- **P0 — Foundation:** A working Quazi-written `.qz → .qzi` compiler, with native binaries produced through Quazistrap.
+- **P1 — Self-hosting:** Essential compiler functionality, native code generation, linking, and a verified self-rebuild.
+- **P2 — Parity & optimization:** Complete the remaining bootstrap capabilities and improve performance, diagnostics, and reliability.
+- **P3 — Expansion:** Extend existing limitations and introduce major new language, compiler, and toolchain capabilities.
+
+For the complete task list and milestone criteria, see **[TODO.md](TODO.md)**.
+
+## License
+
+Licensed under the **GNU Affero General Public License v3.0**. See [LICENSE](LICENSE).
