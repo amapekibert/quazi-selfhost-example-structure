@@ -1,7 +1,14 @@
-/build/
-/.quazi/
-*.o
-*.obj
+*
+!*/
+!*.*
+build/*
+*.lock
 *.exe
-# QZI is source-adjacent build output in this repository, not handwritten.
 *.qzi
+*.qzc
+.idea/*
+.claude/*
+.codex/*
+
+# Local Graphify index, caches, and reports.
+/graphify-out/
