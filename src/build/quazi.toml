@@ -1,4 +1,7 @@
-# Proposed package manifest (adapt keys to the actual Quazi manifest schema).
 [package]
-name = "quazi.build"
+name = "quazi_build"
 version = "0.0.0"
+
+[lib]
+name = "quazi_build"
+path = "src/lib.qz"

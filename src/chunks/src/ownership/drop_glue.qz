@@ -1,6 +1,3 @@
-// Quazi self-host design scaffold — NOT an implementation.
-// File: ownership/drop_glue.qz
-// Responsibility: Emit drop glue for owned values/aggregates in the order established by semantic analysis.
-// Parent: src/chunks/src/ownership.qz
-// Implement only existing bootstrap functionality during P0/P1.
-// Keep implementation within this responsibility; do not create unused abstractions.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

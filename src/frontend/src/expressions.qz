@@ -1,13 +1,3 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: syntax
-// File: expressions.qz
-// Responsibility: Expression syntax.
-// Package boundary: Quazi-specific lexical and syntactic frontend; independent of QZI and machine backends.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.
-// Split boundary: this file remains the coordinator for its responsibility;
-// implementation details belong to the adjacent modules listed below.
-//   expression/precedence.qz: Expression operator precedence and associativity parsing; binary/range/assignment operator chains.
-//   expression/postfix.qz: Postfix parsing for calls, indexing, field/method access and explicit type arguments.
-//   expression/primary.qz: Primary expressions: literals, names, parenthesized expressions, constructors and closures.
-//   expression/patterns.qz: Patterns and match-arm grammar used by match expressions; no semantic exhaustiveness checks.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

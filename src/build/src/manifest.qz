@@ -1,7 +1,3 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: build
-// File: manifest.qz
-// Responsibility: Manifest format and validation.
-// Package boundary: Project graph, cache, manifests and artifacts; default output is .qzi.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

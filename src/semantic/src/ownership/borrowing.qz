@@ -1,12 +1,3 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: semantic.ownership
-// File: borrowing.qz
-// Responsibility: Borrow rules.
-// Package boundary: Resolution, types, ownership and validation of Quazi semantics.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.
-// Split boundary: this file remains the coordinator for its responsibility;
-// implementation details belong to the adjacent modules listed below.
-//   ownership/borrow/loans.qz: Create, track and expire shared/exclusive loans over lexical regions.
-//   ownership/borrow/conflicts.qz: Enforce loan conflicts for reads, writes, moves and overlapping places.
-//   ownership/borrow/provenance.qz: Track origins of borrowed values and prevent invalid reference escape.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

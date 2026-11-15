@@ -1,4 +1,7 @@
-# Proposed package manifest (adapt keys to the actual Quazi manifest schema).
 [package]
-name = "quazi.qz"
+name = "quazi_cli"
 version = "0.0.0"
+
+[[bin]]
+name = "qz"
+path = "src/main.qz"

@@ -1,7 +1,3 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: compiler
-// File: session.qz
-// Responsibility: Per-invocation compiler state.
-// Package boundary: Coordinates compilation phases and preserves deterministic phase boundaries.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

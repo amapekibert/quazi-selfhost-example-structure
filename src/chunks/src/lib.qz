@@ -1,7 +1,3 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: chunks
-// File: lib.qz
-// Responsibility: Public entrypoint for chunk generation from a validated semantic model.
-// Package boundary: Build the in-memory chunk representation from validated semantic structures; no QZI serialization, native encoding or type checking.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

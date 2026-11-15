@@ -1,7 +1,3 @@
-// Quazi self-host compiler — design scaffold, NOT implementation.
-// Component: qzi
-// File: constants.qz
-// Responsibility: Compile-time constants.
-// Package boundary: The central portable, versioned bytecode/artifact format and its contract.
-// TODO(P0/P1): implement existing bootstrap behavior with clean interfaces.
-// Do not introduce new language features before bootstrap parity.
+// Quazi Programming Language
+// Copyright (c) 2026 quazilang
+// SPDX-License-Identifier: AGPL-3.0

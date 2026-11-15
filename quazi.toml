@@ -1,4 +1,7 @@
-# Root manifest placeholder. Final workspace syntax must follow Quazi build semantics.
 [package]
-name = "quazi-selfhost"
+name = "quazi"
 version = "0.0.0"
+
+[[bin]]
+name = "qz"
+path = "src/cli/src/main.qz"

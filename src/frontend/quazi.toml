@@ -1,4 +1,7 @@
-# Proposed package manifest (adapt keys to the actual Quazi manifest schema).
 [package]
-name = "quazi.syntax"
+name = "quazi_frontend"
 version = "0.0.0"
+
+[lib]
+name = "quazi_frontend"
+path = "src/lib.qz"
